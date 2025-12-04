@@ -6,24 +6,26 @@
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="logo">📚 Bookstore</div>
-    <div class="links">
-      <a href="#">Login/Register</a>
-      <a href="#">Find Your Book</a>
-      <a href="#">Find Your Genre</a>
-      <a href="#">Trendy Books</a>
-      <a href="#">About Us / Contact Us</a>
-    </div>
-  </div>
+  <header class="library-header">
+    <nav class="library-nav">
+        <div class="nav-logo">📚 LibraryHub</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="genre.html">Genres</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="Log-in.html">log in</a></li>
+          <li><a href="contact.html">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <input type="text" placeholder="Search books…" class="nav-search" />
+          <button class="nav-btn">Join Now</button>
+        </div>
+      </nav>
+  </header>
+     
 
   <div class="container">
-    <div class="tab-switch">
-      <button class="tab-btn active" onclick="showTab('login')">Login</button>
-      <button class="tab-btn" onclick="showTab('register')">Register</button>
-    </div>
 
-    <!-- Login Form -->
     <form id="login" class="tab-form">
       <label>Email</label>
       <input type="email" placeholder="Enter your email" required>
@@ -40,7 +42,6 @@
       <button type="submit">Login</button>
     </form>
 
-    <!-- Register Form -->
     <form id="register" class="tab-form" style="display:none;">
       <label>Full Name</label>
       <input type="text" placeholder="Enter your name" required>
@@ -64,19 +65,43 @@
     </form>
   </div>
 
-  <div class="footer">
-    © 2025 Bookstore. All Rights Reserved.
-  </div>
+  <footer class="footer">
+    <div class="footer-container">
 
-  <script>
-    function showTab(tab) {
-      document.getElementById('login').style.display = tab === 'login' ? 'block' : 'none';
-      document.getElementById('register').style.display = tab === 'register' ? 'block' : 'none';
-      const buttons = document.querySelectorAll('.tab-btn');
-      buttons[0].classList.toggle('active', tab === 'login');
-      buttons[1].classList.toggle('active', tab === 'register');
-    }
-  </script>
+      <div class="footer-col">
+        <h3 class="footer-title">LibraryHub</h3>
+        <p>Where stories begin and imagination grows.</p>
+      </div>
 
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+<li><a href="index.html">Home</a></li>
+        <li><a href="genre.html">Genres</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="Log-in.html">log in</a></li>
+        <li><a href="contact.html">About</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: support@libraryhub.com</p>
+        <p>Phone: +20 100 000 0000</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <div class="footer-input-box">
+          <input type="email" placeholder="Enter your email">
+          <button>Send</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 LibraryHub. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
